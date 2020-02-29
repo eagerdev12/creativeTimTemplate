@@ -70,7 +70,7 @@
   }
 
   // override BS and keep the border-color normal/grey so that overlaid focus animation draws attention
-  .form-control{
+  .form-control {
     // underline animation color on focus
     $underline-background-image: linear-gradient(
         to top,
@@ -156,8 +156,8 @@
     // on focus set borders and labels to the validation color
 
     // Use the BS provided mixin for the bulk of the color
-    @include form-validation-state("valid", $label-color);
-
+    @include form-validation-state("valid", $label-color, $form-feedback-icon-valid);
+    
     [class^='bmd-label'],
     [class*=' bmd-label'] {
       color: $label-color-focus;
@@ -168,7 +168,7 @@
     }
 
     // Set the border and box shadow on specific inputs to match
-    .form-control{
+    .form-control {
       border-color: $border-color;
     }
 
@@ -296,7 +296,7 @@
   }
 
   // validation icon placement
-  .form-control{
+  .form-control {
     &.form-control-success,
     &.form-control-warning,
     &.form-control-danger {

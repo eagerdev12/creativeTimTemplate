@@ -257,11 +257,10 @@ export class WizardComponent implements OnInit, OnChanges, AfterViewInit {
             const input = $(this);
 
             if (input[0].files && input[0].files[0]) {
-                const reader = new FileReader();
-
-                reader.onload = function (e: FileReaderEvent) {
-                    $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
-                };
+                const reader:FileReader = new FileReader();
+                // reader.onload = (e: FileReaderEvent) => {
+                //     $('#wizardPicturePreview').attr('src', e.target.result).fadeIn('slow');
+                // };
                 reader.readAsDataURL(input[0].files[0]);
             }
         });

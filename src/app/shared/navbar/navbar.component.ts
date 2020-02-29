@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit {
     private sidebarVisible: boolean;
     private _router: Subscription;
 
-    @ViewChild('app-navbar-cmp') button: any;
+    @ViewChild('app-navbar-cmp', {static: false}) button: any;
 
     constructor(location: Location, private renderer: Renderer, private element: ElementRef, private router: Router,) {
         this.location = location;
